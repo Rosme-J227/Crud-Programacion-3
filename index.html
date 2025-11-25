@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>TASK</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<div class="container">
+<div class="header">
+<div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+<h1>TASK</h1>
+</div>
+<div class="content">
+<div class="form-section">
+<form id="taskForm">
+<div class="form-group">
+<label>Titulo</label>
+<input id="taskTitle" placeholder="">
+</div>
+<div class="form-group">
+<label>Description</label>
+<input id="taskDescription" placeholder="">
+</div>
+<button class="btn-agregar">Agregar</button>
+</form>
+</div>
+<div class="right-section">
+<div id="dashboard"></div>
+<div class="tasks-section">
+<h3>Tareas</h3>
+<ul id="tasksList"></ul>
+</div>
+</div>
+</div>
+</div>
+<script src="src/tasks.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/validation.js"></script>
+<script src="src/api.js"></script>
+<script src="src/dashboard.js"></script>
+<script>
+const taskManager = new TaskManager();
+window.taskUI = new TaskUI(taskManager);
+taskUI.init();
+renderDashboard(taskManager);
+</script>
+</body></html>

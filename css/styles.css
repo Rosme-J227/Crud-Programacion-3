@@ -1,0 +1,246 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: white;
+    border-radius: 15px 15px 0 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    flex: 1;
+    font-weight: bold;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    padding: 30px;
+    border: 3px solid #333;
+    border-top: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SECCIÓN DEL FORMULARIO ===== */
+.form-section {
+    flex: 0 0 250px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d0a6ff;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #d4a5ff 0%, #c88ef0 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== SECCIÓN DERECHA (DASHBOARD Y TAREAS) ===== */
+.right-section {
+    flex: 1;
+}
+
+.right-section #dashboard {
+    background: linear-gradient(135deg, #d4a5ff 0%, #c88ef0 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right-section #dashboard h3 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.right-section #dashboard p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+/* ===== SECCIÓN DE TAREAS ===== */
+.tasks-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+#tasksList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    background: #e8dff5;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid #d0a6ff;
+    transition: all 0.3s;
+}
+
+li.completed {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    opacity: 0.8;
+}
+
+li.completed .task-content strong {
+    color: #4caf50;
+    text-decoration: line-through;
+}
+
+/* ===== CONTENIDO DE LA TAREA ===== */
+.task-content {
+    flex: 1;
+}
+
+strong {
+    color: #333;
+    font-size: 1.05em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-desc {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ===== BOTONES DE TAREA ===== */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-complete,
+.btn-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-complete {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-complete:hover:not(:disabled) {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.btn-complete:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.btn-delete {
+    background: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #da190b;
+    transform: scale(1.05);
+}
