@@ -225,7 +225,7 @@ strong {
 }
 
 .btn-complete:hover:not(:disabled) {
-    background: #45a049;
+    background: #5ec563;
     transform: scale(1.05);
 }
 
